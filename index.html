@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<!--INDEX.HTML-->
+<html manifest="" lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>Saylo Mobile</title>
+    <style type="text/css">
+        /**
+         * Example of an initial loading indicator.
+         * It is recommended to keep this as minimal as possible to provide instant feedback
+         * while other resources are still being loaded for the first time
+         */
+        html, body {
+            height: 100%;
+        }
+
+        #appLoadingIndicator {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -10px;
+            margin-left: -50px;
+            width: 100px;
+            height: 20px;
+        }
+
+        #appLoadingIndicator > * {
+            background-color: #FFFFFF;
+            float: left;
+            height: 20px;
+            margin-left: 11px;
+            width: 20px;
+            -webkit-animation-name: appLoadingIndicator;
+            -webkit-border-radius: 13px;
+            -webkit-animation-duration: 0.8s;
+            -webkit-animation-iteration-count: infinite;
+            -webkit-animation-direction: linear;
+            opacity: 0.3
+        }
+
+        #appLoadingIndicator > :nth-child(1) {
+            -webkit-animation-delay: 0.18s;
+        }
+
+        #appLoadingIndicator > :nth-child(2) {
+            -webkit-animation-delay: 0.42s;
+        }
+
+        #appLoadingIndicator > :nth-child(3) {
+            -webkit-animation-delay: 0.54s;
+        }
+
+        @-webkit-keyframes appLoadingIndicator{
+            0% {
+                opacity: 0.3
+            }
+
+            50% {
+                opacity: 1;
+                background-color:#384290
+            }
+
+            100% {
+                opacity:0.3
+            }
+        }
+    </style>
+   
+   	<script id="microloader" type="text/javascript" src="sdk/microloader/development.js"></script>
+	<!--<script type="text/javascript" src="sdk/sencha-touch.js"></script>
+	<script type="text/javascript" src="javascripts/jquery.min.js"></script>
+	<script type="text/javascript" src="javascripts/sayloapi.js"></script>
+	<script type="text/javascript" src="javascripts/datastore.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+    <link rel="stylesheet" type="test/css" href="resources/css/app.css">-->
+	
+    <script>
+        window.fbAsyncInit = function() {
+		FB.init({
+		   appId      : '280238898722315', // App ID
+		   status     : true, // check login status
+		   cookie     : true, // enable cookies to allow the server to access the session
+		   xfbml      : true  // parse XFBML
+		});
+
+		// Additional initialization code here
+		};
+
+		(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/en_US/all.js";
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+	</script>
+</head>
+<body>
+    <div id="fb-root"></div>
+    <div id="appLoadingIndicator">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+</html>
