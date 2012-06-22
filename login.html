@@ -1,0 +1,115 @@
+<!DOCTYPE HTML>
+<!--LOGIN.HTML-->
+<html>
+
+	<head>
+		<link href="/resources/css/login.css" rel="stylesheet" type="text/css"></link>
+		<meta name=viewport
+		  content="width=device-width, initial-scale=1.0, minimum-scale=0.5 maximum-scale=1.0">
+		<meta name="viewport" content="target-densitydpi=device-dpi">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<!--bookmarked icon-->
+		<link rel="shortcut icon" href="images/favicon.ico">
+		<link rel="apple-touch-icon" sizes="57x57" href="images/apple-touch-icon-57x57.png">
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/apple-touch-icon-72x72-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/apple-touch-icon-114x114-precomposed.png">
+	</head>
+	<body style="margin:10px;width: initial;">
+      <div id="fb-root">
+        <!-- you must include this div for the JS SDK to load properly -->
+      </div>
+      <script>
+        window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '280238898722315', // App ID
+          status     : true, // check login status
+          cookie     : true, // enable cookies to allow the server to access the session
+          xfbml      : true  // parse XFBML
+        });
+
+        // Additional initialization code here
+        
+        };
+
+        // Load the SDK Asynchronously
+        (function(d){
+          var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+          if (d.getElementById(id)) {return;}
+          js = d.createElement('script'); js.id = id; js.async = true;
+          js.src = "//connect.facebook.net/en_US/all.js";
+          ref.parentNode.insertBefore(js, ref);
+        }(document));
+      </script>
+    
+	<img class="logo" src="/resources/images/logo.png" />
+
+	<div class="home">
+	  <p></p>
+		<h1>Your location is your connection.</h1>
+		<p>Sign in now to meet and chat with people around you!</p>
+	</div>
+
+	<!--<button onclick="fbLogin();">facebook</button>-->
+
+	<div class="button_seat">
+    	<button class="facebook" type="button" onclick="fbLogin();"><div class="icon"></div>Sign in with <strong>facebook</strong></button>
+    </div>
+
+  	<script type="text/javascript">
+	// Hides mobile browser's address bar when page is done loading.
+	  window.addEventListener('load', function(e) {
+	    setTimeout(function() { window.scrollTo(0, 1); }, 1);
+	  }, false);
+	
+    function fbLogin()
+    {
+         /*FB.getLoginStatus(function(response){
+            if (response.status === 'connected') {
+               // the user is logged in and has authenticated your
+               // app, and response.authResponse supplies
+               // the user's ID, a valid access token, a signed
+               // request, and the time the access token 
+               // and signed request each expire
+               var uid = response.authResponse.userID;
+               var accessToken = response.authResponse.accessToken;
+               window.location = document.location.href + "fb?access=" + accessToken;
+               
+            } else {
+               FB.login(function(response) {
+                 if (response.authResponse) {
+                   FB.api('/me', function(resp) {
+                   var accessToken = response.authResponse.accessToken;
+                   window.location = document.location.href + "fb?access=" + accessToken;
+                   });
+                 } else {
+                   
+                 }
+               }, {scope: 'email,offline_access'});
+            }
+         });*/
+
+        FB.login(function(response) {
+            if (response.authResponse) {
+                FB.api('/me', function(resp) {
+                var accessToken = response.authResponse.accessToken;
+                window.location = document.location.href + "fb?access=" + accessToken;
+            });
+            } else {
+
+            }
+        }, {scope: 'email,offline_access'});
+      }
+      // Google Analytics //////////////////////////////////////// 
+       var _gaq = _gaq || [];
+       _gaq.push(['_setAccount', 'UA-27471725-1']);
+       _gaq.push(['_trackPageview']);
+
+       (function() {
+         var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+       })();
+      </script>
+   </body>
+</html>

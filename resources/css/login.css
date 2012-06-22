@@ -1,0 +1,229 @@
+/************************************************/
+/*                  RESETS                      */
+/************************************************/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center, button,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, 
+button::-moz-focus-inner {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+div, p {
+    display:block;
+}
+a, button {
+    cursor:pointer !important;
+    text-decoration: none;
+}
+label {
+    cursor:inherit;
+}
+button, input[type="button"] {
+    cursor:pointer !important;
+    background:none;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    -o-user-select:none;
+    user-select:none;
+}
+
+input, button {
+    font:inherit;
+    outline:none;
+}
+
+html, body {
+    width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+    font-size:62.5%;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    -webkit-text-size-adjust: 100%; /* Stops Mobile Safari from auto-adjusting font-sizes */
+}
+
+body.map { 
+    overflow: hidden; 
+}
+
+header {
+    position:absolute; 
+    top:0; 
+    left:0; 
+    right:0;
+    z-index:512;
+}
+
+hr {
+    border: none;
+    height: 25px;
+    margin: 0;
+}
+
+/************************************************/
+/*               Facebook Button                */
+/************************************************/
+
+.logo {
+	width: 200px;
+    margin: 20px auto;
+    display:block;
+}
+
+.home {
+    padding:15px;
+    color: #ffffff;
+    border-radius: 10px;
+    background: rgba(0,0,0,0.3);
+    -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+    text-shadow: 0 1px 0 #000000;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	text-align: center;
+}
+
+.home h1 {    
+    font-size: 24px;
+    color:#ffffff;
+    margin-bottom: 30px;
+}
+
+.home p {
+    display: block;
+    font-size: 20px;
+    margin-bottom:30px;
+}
+
+/************************************************/
+/*               Facebook Button                */
+/************************************************/
+
+.button_seat {
+    width: 100%;
+    padding: 7px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    box-shadow: inset 2px 2px 5px rgba(0,0,0,0.2), inset -2px -2px 5px rgba(255,255,255,0.4);
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+	margin-top: 20px;
+}
+
+.facebook {
+    color:#ffffff;
+    height:50px;
+    width:100%;
+    line-height:50px;
+    display:inline-block;
+    border-width:1px;
+    border-style: solid;
+    border-color: #4D669F #2B4782 #1F3A74 #2B4782;
+    border-radius: 3px;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#617db3), to(#274787));
+    background-image: -webkit-linear-gradient(top, #617db3, #274787);
+    background-image: -moz-linear-gradient(top, #617db3, #274787);   
+    background-image: -ms-linear-gradient(top, #617db3, #274787);    
+    background-image: -o-linear-gradient(top, #617db3, #274787);
+    box-shadow: inset 0px 1px 0px #7891c4, 0px 1px 1px rgba(0,0,0,0.25);
+    text-shadow: 0px 1px 2px #1F3A74;
+    font-size:16px;
+
+}
+
+.facebook:hover {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#6987c1), to(#274787));
+    background-image: -webkit-linear-gradient(top, #6987c1, #274787);
+    background-image: -moz-linear-gradient(top, #6987c1, #274787);   
+    background-image: -ms-linear-gradient(top, #6987c1, #274787);    
+    background-image: -o-linear-gradient(top, #6987c1, #274787);
+}
+
+.facebook:active {
+    box-shadow: inset 0px 3px 7px #273249;
+}
+
+.facebook strong {
+    font-weight: bold;
+    display:inline;
+    font-size: 110%;
+}
+
+.facebook:hover strong {
+    text-shadow: 0px 0px 2px rgba(255,255,255,0.5), 0px 0px 3px rgba(255,255,255,0.25);
+}
+.facebook:active strong {
+    text-shadow: 0px 1px 2px #1F3A74;
+}
+
+.facebook .icon {
+    height:48px;
+    width:48px;
+    background-image:url('../images/map_sprites.png');
+    background-position: 0px -420px;
+    border-right: 1px solid #2B4782;
+    float:left;
+    position:relative;
+}
+
+.facebook .icon:after {
+    content: "";
+    position:absolute;
+    height:100%;
+    width:1px;
+    right:-2px;
+    background:#7891C4;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#7891C4), to(#526ea7));
+    background-image: -webkit-linear-gradient(top, #7891C4, #526ea7);
+    background-image: -moz-linear-gradient(top, #7891C4, #526ea7);   
+    background-image: -ms-linear-gradient(top, #7891C4, #526ea7);    
+    background-image: -o-linear-gradient(top, #7891C4, #526ea7);
+}
+
+.facebook:active .icon:after {
+    opacity:0.25;
+}
