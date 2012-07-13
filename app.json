@@ -35,15 +35,15 @@
 		// 	"path": "all-classes.min.js",
 		// 	"update": "delta"
 		// },  
-		{
-			"path": "all-classes.min.js",
-			"update": "full"
-		},
+	{
+		"path": "all-classes.min.js",
+		"update": "full"
+	},
 		// {
 		// 	"path": "app-all.js",
 		// 	"update": "delta"
 		// },
-		{
+	{
             "path": "app.js",
             "update": "full"
         },
