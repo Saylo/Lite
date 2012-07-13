@@ -1,0 +1,8 @@
+cp ../Mobile/all-classes.min.js .
+cp ../Mobile/app-all.js .
+cp ../Mobile/app.js .
+cp ../Mobile/app.json .
+cp ../Mobile/index.html .
+cp ../Mobile/login.html .
+rm -rf resources
+cp -r ../Mobile/resources .

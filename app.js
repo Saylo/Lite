@@ -26,7 +26,7 @@ Ext.application({
         'SayloMobile.config'
     ],
 	
-   controllers: ['Main'],
+	controllers: ['Login'],
                 
 	viewport: {
 		autoMaximize: true
@@ -42,7 +42,7 @@ Ext.application({
         return SayloMobile.app.coords;
     },
                 
-    views: ['Main'],
+    views: ['Login'],
 
     icon: {
         57: 'resources/icons/Icon.png',
@@ -60,12 +60,12 @@ Ext.application({
 
         //navigator.geolocation.getCurrentPosition(geoSuccess, geoFail, {enableHighAccuracy: true});
         
-        var viewMain = {
-            xtype: "main"
+        var viewLogin = {
+            xtype: "login"
         };
         
         // Initialize the main view
-        Ext.Viewport.add(viewMain);
+        Ext.Viewport.add(viewLogin);
     },
 
     onUpdated: function() {

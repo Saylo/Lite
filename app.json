@@ -19,6 +19,12 @@
      */
     "js": [
         {
+            "path": "cordova-1.9.0.js"
+        }, 
+        {
+            "path": "phonegap_fix.js"
+        }, 
+        {
             "path": "sdk/sencha-touch.js"
         }, 
 		// {
@@ -42,15 +48,15 @@
             "update": "full"
         },
         {
-        	"path": "javascripts/jquery.min.js",
+        	"path": "jquery.min.js",
         	"update": "full"
         },
 		{
-			"path": "javascripts/sayloapi.js",
+			"path": "sayloapi.js",
 			"update": "full"
 		},
 		{
-			"path": "javascripts/datastore.js",
+			"path": "datastore.js",
 			"update": "full"
 		}
     ],
