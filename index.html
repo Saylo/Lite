@@ -86,13 +86,10 @@
                             'Device Platform: ' + device.platform + '<br />' + 
                             'Device UUID: '     + device.uuid     + '<br />' + 
                             'Device Version: '  + device.version  + '<br />');
-//        
-    }
-
-    $(document).ready(function() {
         window.now = nowInitialize("http://www.saylo.com:6789");
         alert(window.now);
-    });
+//        
+    }
     </script>
    
    
@@ -105,5 +102,12 @@
    
 </head>
 <body>
+    <div id="fb-root"></div>
+    <div id="appLoadingIndicator">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
 </body>
+</html>
 </html>
