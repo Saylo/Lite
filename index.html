@@ -79,54 +79,29 @@
     // Cordova is ready
     //
     function onDeviceReady() {
-        alert('Device Ready: ' + nowInitialize );
-//        window.now = nowInitialize("http://www.saylo.com:6789");
         alert('Device Name: '     + device.name     + '<br />' + 
                             'Device Cordova: '  + device.cordova + '<br />' + 
                             'Device Platform: ' + device.platform + '<br />' + 
                             'Device UUID: '     + device.uuid     + '<br />' + 
                             'Device Version: '  + device.version  + '<br />');
+//        
     }
 
-
+    $(document).ready(function() {
+        window.now = nowInitialize("http://www.saylo.com:6789");
+        alert(window.now);
+    });
     </script>
    
-   	<script id="microloader" type="text/javascript" src="sdk/microloader/development.js"></script>
-	<!--<script type="text/javascript" src="sdk/sencha-touch.js"></script>
-	<script type="text/javascript" src="javascripts/jquery.min.js"></script>
-	<script type="text/javascript" src="javascripts/sayloapi.js"></script>
-	<script type="text/javascript" src="javascripts/datastore.js"></script>
-	<script type="text/javascript" src="app.js"></script>
+   <script id="microloader" type="text/javascript" src="sdk/microloader/development.js"></script>
+   <!--<script type="text/javascript" src="sdk/sencha-touch.js"></script>
+   <script type="text/javascript" src="javascripts/jquery.min.js"></script>
+   <script type="text/javascript" src="javascripts/sayloapi.js"></script>
+   <script type="text/javascript" src="javascripts/datastore.js"></script>
+   <script type="text/javascript" src="app.js"></script>
     <link rel="stylesheet" type="test/css" href="resources/css/app.css">-->
-	
-    <script>
-        window.fbAsyncInit = function() {
-		FB.init({
-		   appId      : '280238898722315', // App ID
-		   status     : true, // check login status
-		   cookie     : true, // enable cookies to allow the server to access the session
-		   xfbml      : true  // parse XFBML
-		});
-
-		// Additional initialization code here
-		};
-
-		(function(d, s, id) {
-		  var js, fjs = d.getElementsByTagName(s)[0];
-		  if (d.getElementById(id)) return;
-		  js = d.createElement(s); js.id = id;
-		  js.src = "//connect.facebook.net/en_US/all.js";
-		  fjs.parentNode.insertBefore(js, fjs);
-		}(document, 'script', 'facebook-jssdk'));
-
-	</script>
+   
 </head>
 <body>
-    <div id="fb-root"></div>
-    <div id="appLoadingIndicator">
-        <div></div>
-        <div></div>
-        <div></div>
-    </div>
 </body>
 </html>
