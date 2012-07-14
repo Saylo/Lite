@@ -68,9 +68,11 @@
 
 <!--    <script type="text/javascript" charset="utf-8" src="cordova-1.9.0.js"></script>
 -->
+    <script id="microloader" type="text/javascript" src="sdk/microloader/development.js"></script>
     <script type="text/javascript" charset="utf-8" src="now.js"></script>
     <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
-    <script type="text/javascript" charset="utf-8">
+    
+    <script tydpe="text/javascript" charset="utf-8">
 
     // Wait for Cordova to load
     //
@@ -84,16 +86,13 @@
                             'Device Platform: ' + device.platform + '<br />' + 
                             'Device UUID: '     + device.uuid     + '<br />' + 
                             'Device Version: '  + device.version  + '<br />');
-//        
-    }
-
-    $(document).ready(function() {
         window.now = nowInitialize("http://www.saylo.com:6789");
         alert(window.now);
-    });
+//        
+    }
     </script>
    
-   <script id="microloader" type="text/javascript" src="sdk/microloader/development.js"></script>
+   
    <!--<script type="text/javascript" src="sdk/sencha-touch.js"></script>
    <script type="text/javascript" src="javascripts/jquery.min.js"></script>
    <script type="text/javascript" src="javascripts/sayloapi.js"></script>
@@ -103,5 +102,11 @@
    
 </head>
 <body>
+    <div id="appLoadingIndicator">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
 </body>
+</html>
 </html>
