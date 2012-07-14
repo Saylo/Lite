@@ -86,18 +86,6 @@
                             'Device Platform: ' + device.platform + '<br />' + 
                             'Device UUID: '     + device.uuid     + '<br />' + 
                             'Device Version: '  + device.version  + '<br />');*/
-
-        var storage = window.localStorage;
-        window.now = nowInitialize("http://www.saylo.com:6789");
-        sayloApi.setup({
-            fnRecConnect: function(data) {
-                storage.setItem("sayloId", data.uid);
-            }
-        });
-
-        now.reqConnect({
-            uid: storage.getItem("sayloId")
-        })
 //        
     }
     </script>
