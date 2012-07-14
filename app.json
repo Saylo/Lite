@@ -20,42 +20,42 @@
     "js": [
         {
             "path": "sdk/sencha-touch.js",
-	    "update": "full"
+       "update": "full"
         }, 
-		// {
-		// 	"path": "all-classes.js",
-		// 	"update": "delta"
-		// }, 
-		// {
-		// 	"path": "all-classes.min.js",
-		// 	"update": "delta"
-		// },  
-	{
-		"path": "all-classes.min.js",
-		"update": "full"
-	},
-		// {
-		// 	"path": "app-all.js",
-		// 	"update": "delta"
-		// },
-	{
+      // {
+      //    "path": "all-classes.js",
+      //    "update": "delta"
+      // }, 
+      // {
+      //    "path": "all-classes.min.js",
+      //    "update": "delta"
+      // },  
+   {
+      "path": "all-classes.min.js",
+      "update": "full"
+   },
+      // {
+      //    "path": "app-all.js",
+      //    "update": "delta"
+      // },
+   {
             "path": "app.js",
             "update": "full"
         },
         {
-        	"path": "jquery.min.js",
-        	"update": "full"
+         "path": "jquery.min.js",
+         "update": "full"
         },
-		{
-			"path": "sayloapi.js",
-			"update": "full"
-		},
-		{
-			"path": "datastore.js",
-			"update": "full"
-		}
+      {
+         "path": "sayloapi.js",
+         "update": "full"
+      },
+      {
+         "path": "datastore.js",
+         "update": "full"
+      }
     ],
-	
+   
     /**
      * List of all CSS assets in the right inclusion order.
      * Each item is an object with the following format:

@@ -81,13 +81,23 @@
     // Cordova is ready
     //
     function onDeviceReady() {
-        alert('Device Name: '     + device.name     + '<br />' + 
+        /*alert('Device Name: '     + device.name     + '<br />' + 
                             'Device Cordova: '  + device.cordova + '<br />' + 
                             'Device Platform: ' + device.platform + '<br />' + 
                             'Device UUID: '     + device.uuid     + '<br />' + 
-                            'Device Version: '  + device.version  + '<br />');
+                            'Device Version: '  + device.version  + '<br />');*/
+
+        var storage = window.localStorage;
         window.now = nowInitialize("http://www.saylo.com:6789");
-        alert(window.now);
+        sayloApi.setup({
+            fnRecConnect: function(data) {
+                storage.setItem("sayloId", data.uid);
+            }
+        });
+
+        now.reqConnect({
+            uid: storage.getItem("sayloId")
+        })
 //        
     }
     </script>
