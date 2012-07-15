@@ -26,7 +26,7 @@ Ext.application({
         'SayloMobile.config'
     ],
 	
-	controllers: ['Login'],
+	controllers: ['Saylo'],
                 
 	viewport: {
 		autoMaximize: true
