@@ -42,7 +42,7 @@ Ext.application({
         return SayloMobile.app.coords;
     },
                 
-    views: ['Login'],
+    views: ['Login', 'Main'],
 
     icon: {
         57: 'resources/icons/Icon.png',
@@ -64,8 +64,12 @@ Ext.application({
             xtype: "login"
         };
         
+        var viewMain = {
+            xtype: "main"
+        }
+        
         // Initialize the main view
-        Ext.Viewport.add(viewLogin);
+        Ext.Viewport.add([viewLogin, viewMain]);
     },
 
     onUpdated: function() {
