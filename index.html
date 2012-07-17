@@ -87,8 +87,24 @@
                             'Device Platform: ' + device.platform + '<br />' + 
                             'Device UUID: '     + device.uuid     + '<br />' + 
                             'Device Version: '  + device.version  + '<br />');*/
-//        
+       
+        navigator.geolocation.getCurrentPosition(onSuccess, onError);
     }
+    window.currentPosition = {};
+    function onSuccess(position) {
+        window.currentPosition = position;
+    }
+
+    // onError Callback receives a PositionError object
+    //
+    function onError(error) {
+        alert('code: '    + error.code    + '\n' +
+              'message: ' + error.message + '\n');
+    }
+    
+    $(document).ready(function() {
+        //navigator.geolocation.getCurrentPosition(onSuccess, onError);
+    });
     </script>
    
    
