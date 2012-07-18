@@ -88,7 +88,7 @@
                             'Device UUID: '     + device.uuid     + '<br />' + 
                             'Device Version: '  + device.version  + '<br />');*/
        
-        //navigator.geolocation.getCurrentPosition(onSuccess, onError);
+        navigator.geolocation.getCurrentPosition(onSuccess, onError, {enableHighAccuracy: true});
     }
 
     function onSuccess(position) {
