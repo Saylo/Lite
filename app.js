@@ -31,19 +31,10 @@ Ext.application({
 	viewport: {
 		autoMaximize: true
 	}, 
-	
-    coords: {},
-    foo: 'bar',
-    setCoords: function(arg) {
-        SayloMobile.app.coords = arg;
-    },
-    
-    getCoords: function() {
-        return SayloMobile.app.coords;
-    },
                 
     views: ['Login', 'Main'],
-
+    models: ['Message'],
+    stores: ['ConvoText'],
     icon: {
         57: 'resources/icons/Icon.png',
         72: 'resources/icons/Icon~ipad.png',
